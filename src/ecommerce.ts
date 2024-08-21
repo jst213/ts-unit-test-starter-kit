@@ -101,7 +101,9 @@ export function clearCart(): Record<string, number> {
  * @param {number} total - The total cost to apply the discount to.
  * @return {number} The total cost with the discount applied, or the original total cost if the discount is not applicable.
  */
-// export function applyShippingDiscount(total: number): number {
-//   // Activity 1 code here
-//   return 0;
-// }
+export function applyShippingDiscount(total: number): number {
+  if (total > 500) {
+    return total - 10;
+  }
+  return total;
+}
